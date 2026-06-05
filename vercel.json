@@ -1,16 +1,19 @@
-{
-  "regions": [
-    "sin1"
-  ],
-  "build": {
-    "env": {
-      "NODEJS_AWS_HANDLER_NAME": "handler"
-    }
-  },
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/api/serverless"
-    }
-  ]
+{ 
+  "regions": ["sin1"], 
+  "functions": { 
+    "api/serverless.ts": { 
+      "runtime": "nodejs@22.x" 
+    } 
+  }, 
+  "build": { 
+    "env": { 
+      "NODEJS_AWS_HANDLER_NAME": "handler" 
+    } 
+  }, 
+  "rewrites": [ 
+    { 
+      "source": "/(.*)", 
+      "destination": "/api/serverless" 
+    } 
+  ] 
 }
